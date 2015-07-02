@@ -1,0 +1,21 @@
+/* CSS declarations go here */
+#spotifyLoggedin{
+}
+
+.jumbotron{
+  background-color: #84bd00
+}
+#spotifyContainer{
+  /*background-color: #84bd00;*/
+}
+.playlistname{
+  float: left;
+  font-weight: bold;
+}
+.numtrack{
+  float: right;
+}
+
+.playlistcontainer{
+  height:100%;
+}

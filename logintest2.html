@@ -1,0 +1,63 @@
+<head>
+  <title>logintest2</title>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>SpotiApple</h1>
+    </div>
+  </div>
+
+<!-- <div class="container"> -->
+  <div class=row>
+
+      {{> SpotifyArea}}
+      <!-- {{> AppleArea}} -->
+
+
+  </div>
+<!-- </div> -->
+
+
+
+</body>
+
+<template name="SpotifyArea">
+  <div class="col-xs-12" id="spotifyContainer">
+    {{#if spotifyisLoggedin}}
+      <div id="spotifyLoggedin">
+        <h1>Logged in</h1>
+      </div>
+    {{else}}
+      <div id="spotifyLogin">
+        <button id="SpotifyLogInButton">Login</button>
+      </div>
+    {{/if}}
+    <button id="SpotifyGetPlaylistButton">Get Playlist</button>
+    <!-- <button id="refresh">refresh</button> -->
+
+
+    <div class=row>
+      {{#each SpotifySongs}}
+        <div class="col-xs-12 playlistcontainer">
+          <div class="playlistname">{{name}}</div>
+          <div class="numtrack">{{total}}</div>
+
+          {{#each tracks}}
+            <div class="trackname">{{track.name}} length: {{track.duration_ms}}</div>
+          {{/each}}
+
+        </div>
+      {{/each}}
+    </div>
+
+
+  </div>
+</template>
+
+<template name="AppleArea">
+  <div class="col-md-6" id="appleContainer">
+    <h1>WELCOME2</h1>
+  </div>
+</template>
